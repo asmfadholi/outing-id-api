@@ -11,6 +11,47 @@
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "route": {
+      "type": "string"
+    },
+    "maxQuota": {
+      "type": "integer"
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "minAge": {
+      "type": "integer"
+    },
+    "availability": {
+      "type": "json"
+    },
+    "package": {
+      "type": "json"
+    },
+    "itenerary": {
+      "type": "json"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "accomodations": {
+      "type": "json"
+    },
+    "transportations": {
+      "type": "json"
     }
   }
 }

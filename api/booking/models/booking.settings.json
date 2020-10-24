@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "name": "booking"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "trip": {
+      "model": "trip"
+    },
+    "partisipant": {
+      "type": "integer"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "tripDate": {
+      "type": "json"
+    }
+  }
+}

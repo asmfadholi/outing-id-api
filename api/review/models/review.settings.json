@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "name": "review"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "rating": {
+      "type": "integer"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "trip": {
+      "model": "trip"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
