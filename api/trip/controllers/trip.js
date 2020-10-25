@@ -1,4 +1,4 @@
-const { sanitizeEntity } = require('strapi-utils');
+'use strict';
 
 module.exports = {
   /**
@@ -6,11 +6,4 @@ module.exports = {
    *
    * @return {Object}
    */
-
-  async findOne(ctx) {
-    const { slug } = ctx.params;
-
-    const entity = await strapi.services.trip.findOne({ slug });
-    return sanitizeEntity(entity, { model: strapi.models.trip });
-  },
 };
