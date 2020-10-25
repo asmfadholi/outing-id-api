@@ -18,13 +18,13 @@ module.exports = {
 
     await axios({
       method: "get",
-      url: `https://api.sandbox.midtrans.com/v2/${orderId}/status`,
+      url: `${process.env.SERVER_URL_PAYMENT}/v2/${orderId}/status`,
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
         Authorization:
           "Basic " +
-          Buffer.from("SB-Mid-server-dlFIEODNAA1jrFgY8lsnZQE7").toString("base64")
+          Buffer.from(process.env.SERVER_KEY_PAYMENT).toString("base64")
       },
     })
     .then(async response => {
@@ -47,8 +47,8 @@ module.exports = {
       const bookingDetail = await strapi.services.booking.findOne({ id: booking.id });
       let snap = new midtransClient.Snap({
         isProduction : false,
-        serverKey : 'SB-Mid-server-dlFIEODNAA1jrFgY8lsnZQE7',
-        clientKey : 'SB-Mid-client-hYuZ3Vv3EOGDvsP8'
+        serverKey : process.env.SERVER_KEY_PAYMENT,
+        clientKey : process.env.CLIENT_KEY_PAYMENT
       });
       const orderId = "order-trip-" + Math.round(new Date().getTime() / 1000);
       let parameter = {
