@@ -13,10 +13,12 @@
       "model": "booking"
     },
     "orderId": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "transactionToken": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "detailPayment": {
       "type": "json"

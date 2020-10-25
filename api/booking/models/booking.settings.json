@@ -13,13 +13,16 @@
       "model": "trip"
     },
     "participant": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "origin": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "tripDate": {
-      "type": "json"
+      "type": "json",
+      "required": true
     }
   }
 }

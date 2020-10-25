@@ -54,14 +54,15 @@
       "configurable": false
     },
     "job": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "photo": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
         "files",
+        "images",
         "videos"
       ],
       "plugin": "upload",

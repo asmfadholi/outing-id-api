@@ -10,34 +10,44 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "type": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "route": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "maxQuota": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "duration": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "minAge": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "availability": {
-      "type": "json"
+      "type": "json",
+      "required": true
     },
     "package": {
-      "type": "json"
+      "type": "json",
+      "required": true
     },
     "itenerary": {
-      "type": "json"
+      "type": "json",
+      "required": true
     },
     "slug": {
       "type": "uid",
@@ -45,10 +55,12 @@
       "required": true
     },
     "price": {
-      "type": "biginteger"
+      "type": "biginteger",
+      "required": true
     },
     "accomodations": {
-      "type": "json"
+      "type": "json",
+      "required": true
     },
     "transportations": {
       "type": "json"
@@ -57,26 +69,27 @@
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
         "files",
+        "images",
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
         "files",
+        "images",
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "level": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
