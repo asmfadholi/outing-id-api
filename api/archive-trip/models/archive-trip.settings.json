@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "archive_trips",
+  "info": {
+    "name": "archiveTrip"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "trip": {
+      "model": "trip"
+    }
+  }
+}

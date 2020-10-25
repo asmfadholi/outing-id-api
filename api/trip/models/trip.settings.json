@@ -54,7 +54,7 @@
       "type": "json"
     },
     "banner": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -74,6 +74,9 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "level": {
+      "type": "string"
     }
   }
 }

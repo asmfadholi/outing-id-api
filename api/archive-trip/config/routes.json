@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/archive-trips",
+      "handler": "archive-trip.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/archive-trips/count",
+      "handler": "archive-trip.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/archive-trips/:id",
+      "handler": "archive-trip.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/archive-trips",
+      "handler": "archive-trip.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/archive-trips/:id",
+      "handler": "archive-trip.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/archive-trips/:id",
+      "handler": "archive-trip.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
