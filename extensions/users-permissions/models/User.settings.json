@@ -67,6 +67,12 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "fullname": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "integer"
     }
   }
 }
