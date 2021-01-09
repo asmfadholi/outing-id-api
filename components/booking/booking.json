@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_booking_bookings",
+  "info": {
+    "name": "tripDate",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "departure": {
+      "type": "date"
+    },
+    "return": {
+      "type": "date"
+    }
+  }
+}

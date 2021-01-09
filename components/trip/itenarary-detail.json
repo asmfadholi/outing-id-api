@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_trip_itenarary_details",
+  "info": {
+    "name": "ItenararyDetail",
+    "icon": "anchor"
+  },
+  "options": {},
+  "attributes": {
+    "accomodation": {
+      "type": "string"
+    },
+    "detail_location": {
+      "type": "string"
+    },
+    "transport": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "string"
+    },
+    "is_open_place": {
+      "type": "boolean"
+    },
+    "icon_accomodation": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

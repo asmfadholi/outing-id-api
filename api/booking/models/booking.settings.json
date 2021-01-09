@@ -21,8 +21,9 @@
       "required": true
     },
     "tripDate": {
-      "type": "json",
-      "required": true
+      "type": "component",
+      "repeatable": false,
+      "component": "booking.booking"
     }
   }
 }

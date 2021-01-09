@@ -37,18 +37,6 @@
       "type": "integer",
       "required": true
     },
-    "availability": {
-      "type": "json",
-      "required": true
-    },
-    "package": {
-      "type": "json",
-      "required": true
-    },
-    "itenerary": {
-      "type": "json",
-      "required": true
-    },
     "slug": {
       "type": "uid",
       "targetField": "name",
@@ -57,13 +45,6 @@
     "price": {
       "type": "biginteger",
       "required": true
-    },
-    "accomodations": {
-      "type": "json",
-      "required": true
-    },
-    "transportations": {
-      "type": "json"
     },
     "banner": {
       "model": "file",
@@ -90,6 +71,31 @@
     "level": {
       "type": "string",
       "required": true
+    },
+    "packages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "trip.package"
+    },
+    "availability": {
+      "type": "component",
+      "repeatable": false,
+      "component": "trip.availibility"
+    },
+    "iteneraries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "trip.itenerary"
+    },
+    "accomodations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "trip.accomodation"
+    },
+    "transportations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "trip.accomodation"
     }
   }
 }

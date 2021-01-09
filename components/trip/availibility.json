@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_trip_availibilities",
+  "info": {
+    "name": "availibility",
+    "icon": "adjust"
+  },
+  "options": {},
+  "attributes": {
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    }
+  }
+}

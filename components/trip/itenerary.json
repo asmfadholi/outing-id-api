@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_trip_iteneraries",
+  "info": {
+    "name": "itenerary",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "day": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "details": {
+      "type": "component",
+      "repeatable": true,
+      "component": "trip.itenarary-detail"
+    }
+  }
+}
