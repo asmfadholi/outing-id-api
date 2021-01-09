@@ -7,7 +7,9 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "deploy:prod": "gcloud app deploy app-production.yaml --project outing-apps",
+    "strapi": "strapi",
+    "gcp-build": "strapi build"
   },
   "devDependencies": {},
   "dependencies": {
@@ -35,7 +37,7 @@
     "uuid": "4ef8c067-c181-43ea-8a34-f489617c7160"
   },
   "engines": {
-    "node": "12.19.0",
+    "node": ">=10.0",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
