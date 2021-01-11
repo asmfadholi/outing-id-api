@@ -13,6 +13,7 @@ env_variables:
   INSTANCE_CONNECTION_NAME: 'outing-apps:asia-southeast2:vms-database'
   MAILGUN_API_KEY: '4fe3559f96a2eabc75edc2d9ce2bab0a-c50a0e68-2ee23c30'
   MAILGUN_DOMAIN: 'sandboxad30fb39b86e489193a1735be1d429b5.mailgun.org'
+  DEFAULT_EMAIL: 'vms@mailinator.com'
   # DATABASE_HOST: 'ec2-54-237-135-248.compute-1.amazonaws.com'
   SENDGRID_API_KEY: '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'
 
