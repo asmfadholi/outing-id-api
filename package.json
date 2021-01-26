@@ -9,7 +9,7 @@
     "build": "strapi build",
     "deploy:prod": "gcloud app deploy app-production.yaml --project outing-apps",
     "strapi": "strapi",
-    "gcp-build": "strapi build"
+    "gcp-build": "npm run build --production"
   },
   "devDependencies": {},
   "dependencies": {
