@@ -96,6 +96,23 @@
       "type": "component",
       "repeatable": true,
       "component": "trip.accomodation"
+    },
+    "programs": {
+      "collection": "program"
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "recommended": {
+      "type": "boolean"
     }
   }
 }

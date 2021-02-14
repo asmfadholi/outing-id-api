@@ -9,7 +9,7 @@
     "build": "strapi build",
     "deploy:prod": "gcloud app deploy app-production.yaml --project outing-apps",
     "strapi": "strapi",
-    "gcp-build": "npm run build --production"
+    "gcp-build": "npm run build"
   },
   "devDependencies": {},
   "dependencies": {
@@ -18,7 +18,6 @@
     "midtrans-client": "^1.2.1",
     "pg": "^8.3.3",
     "pg-connection-string": "^2.3.0",
-    "sqlite3": "latest",
     "strapi": "3.1.0-alpha.5",
     "strapi-admin": "3.1.0-alpha.5",
     "strapi-connector-bookshelf": "3.1.0-alpha.5",

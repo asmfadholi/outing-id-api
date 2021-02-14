@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "activities",
+  "collectionName": "programs",
   "info": {
-    "name": "activity"
+    "name": "program"
   },
   "options": {
     "increments": true,
@@ -10,8 +10,18 @@
   },
   "attributes": {
     "name": {
-      "type": "string",
-      "required": true
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     },
     "images": {
       "collection": "file",
@@ -26,6 +36,13 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "background": {
+      "type": "string"
     }
   }
 }
