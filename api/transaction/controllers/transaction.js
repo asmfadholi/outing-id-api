@@ -46,7 +46,7 @@ module.exports = {
 
       const bookingDetail = await strapi.services.booking.findOne({ id: booking.id });
       let snap = new midtransClient.Snap({
-        isProduction : false,
+        isProduction : true,
         serverKey : process.env.SERVER_KEY_PAYMENT,
         clientKey : process.env.CLIENT_KEY_PAYMENT
       });
