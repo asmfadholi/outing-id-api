@@ -14,6 +14,9 @@ env_variables:
   MAILGUN_API_KEY: '4fe3559f96a2eabc75edc2d9ce2bab0a-c50a0e68-2ee23c30'
   MAILGUN_DOMAIN: 'sandboxad30fb39b86e489193a1735be1d429b5.mailgun.org'
   DEFAULT_EMAIL: 'vms@mailinator.com'
+  SERVER_KEY_PAYMENT: 'Mid-server-t_oNH3GpvCtNQ0h42zUL1G-0'
+  CLIENT_KEY_PAYMENT: 'Mid-client-BctuxfAbc1rJr3P5'
+  SERVER_URL_PAYMENT: 'https://api.midtrans.com'
   # DATABASE_HOST: 'ec2-54-237-135-248.compute-1.amazonaws.com'
   SENDGRID_API_KEY: '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'
 
