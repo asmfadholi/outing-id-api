@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/value-prepositions",
+      "handler": "value-preposition.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/value-prepositions/count",
+      "handler": "value-preposition.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/value-prepositions/:id",
+      "handler": "value-preposition.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/value-prepositions",
+      "handler": "value-preposition.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/value-prepositions/:id",
+      "handler": "value-preposition.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/value-prepositions/:id",
+      "handler": "value-preposition.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
