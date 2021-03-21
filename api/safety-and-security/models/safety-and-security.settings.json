@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "safety_and_securities",
+  "info": {
+    "name": "safetyAndSecurity"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

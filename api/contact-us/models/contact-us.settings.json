@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "contactuses",
+  "info": {
+    "name": "contactUs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "address": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "whatsApp": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

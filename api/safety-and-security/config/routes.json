@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/safety-and-securities",
+      "handler": "safety-and-security.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/safety-and-securities/count",
+      "handler": "safety-and-security.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/safety-and-securities/:id",
+      "handler": "safety-and-security.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/safety-and-securities",
+      "handler": "safety-and-security.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/safety-and-securities/:id",
+      "handler": "safety-and-security.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/safety-and-securities/:id",
+      "handler": "safety-and-security.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
