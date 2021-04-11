@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/privacy-and-policies",
+      "handler": "privacy-and-policy.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/privacy-and-policies/count",
+      "handler": "privacy-and-policy.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/privacy-and-policies/:id",
+      "handler": "privacy-and-policy.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/privacy-and-policies",
+      "handler": "privacy-and-policy.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/privacy-and-policies/:id",
+      "handler": "privacy-and-policy.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/privacy-and-policies/:id",
+      "handler": "privacy-and-policy.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
