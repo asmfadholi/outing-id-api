@@ -9,13 +9,30 @@ module.exports = ({ env }) => ({
     },
   },
   email: {
-    provider: 'sendgrid',
+    provider: 'smtp',
     providerOptions: {
-      apiKey: env('SENDGRID_API_KEY'),
+      host: env('SMTP_HOST'), //SMTP Host
+      port: env('SMTP_PORT')   , //SMTP Port
+      // secure: true,
+      username: env('SMTP_USERNAME'),
+      password: env('SMTP_PASSWORD'),
+      // rejectUnauthorized: true,
+      requireTLS: true,
+      connectionTimeout: 1,
     },
     settings: {
-      defaultFrom: 'no-reply@outing.id',
-      defaultReplyTo: 'no-reply@outing.id',
+      from: env('EMAIL_FROM'),
+      replyTo: env('EMAIL_REPLY_TO'),
     },
   },
+  // email: {
+  //   provider: 'sendgrid',
+  //   providerOptions: {
+  //     apiKey: env('SENDGRID_API_KEY'),
+  //   },
+  //   settings: {
+  //     defaultFrom: 'no-reply@outing.id',
+  //     defaultReplyTo: 'no-reply@outing.id',
+  //   },
+  // },
 });

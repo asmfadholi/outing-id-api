@@ -20,5 +20,12 @@ env_variables:
   # DATABASE_HOST: 'ec2-54-237-135-248.compute-1.amazonaws.com'
   SENDGRID_API_KEY: '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'
 
+  SMTP_HOST: 'smtp.mandrillapp.com'
+  SMTP_PORT: '587'
+  SMTP_USERNAME: 'CaesarLab'
+  SMTP_PASSWORD: '3Jhs1DvvlBr5iCYiBgzisA'
+  EMAIL_FROM: 'no-reply@outing.id'
+  EMAIL_REPLY_TO: 'no-reply@outing.id'
+
 beta_settings:
   cloud_sql_instances: 'outing-apps:asia-southeast2:vms-database'
