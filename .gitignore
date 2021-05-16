@@ -114,3 +114,5 @@ exports
 build
 .tmp
 package-lock.json
+
+*.yaml
