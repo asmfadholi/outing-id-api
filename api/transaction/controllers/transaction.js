@@ -15,7 +15,6 @@ module.exports = {
     let detailTrans = await strapi.services.transaction.findOne({ id });
 
     const { orderId } = detailTrans;
-
     await axios({
       method: "get",
       url: `${process.env.SERVER_URL_PAYMENT}/v2/${orderId}/status`,
@@ -42,29 +41,36 @@ module.exports = {
       const { data, files } = parseMultipartData(ctx);
       entity = await strapi.services.transaction.create(data, { files });
     } else {
-      const { booking } = ctx.request.body;
 
-      const bookingDetail = await strapi.services.booking.findOne({ id: booking.id });
+      // create transaction
+      const orderId = "order-trip-" + Math.round(new Date().getTime() / 1000);
+      ctx.request.body.transactionToken = orderId;
+      ctx.request.body.orderId = orderId;
+      entity = await strapi.services.transaction.create(ctx.request.body);
+      sanitizeEntity(entity, { model: strapi.models.transaction })
+
+      // create midtrans trans
+      const { id: bookingId, participant = 1 } = entity.booking;
+      const bookingDetail = await strapi.services.booking.findOne({ id: bookingId });
       let snap = new midtransClient.Snap({
-        isProduction : true,
+        isProduction : process.env.NODE_ENV === 'production',
         serverKey : process.env.SERVER_KEY_PAYMENT,
         clientKey : process.env.CLIENT_KEY_PAYMENT
       });
-      const orderId = "order-trip-" + Math.round(new Date().getTime() / 1000);
+      const orderIdMidtrans = orderId + '-' + entity.id;
       let parameter = {
         transaction_details: {
-            order_id: orderId,
-            gross_amount: Number(bookingDetail.trip.price)
+            order_id: orderIdMidtrans,
+            gross_amount: Number(bookingDetail.trip.price) * participant
         },
       };
-      await snap.createTransaction(parameter)
-      .then((transaction)=>{
-          // transaction token
-          let transactionToken = transaction.token;
-          ctx.request.body.transactionToken = transactionToken;
-          ctx.request.body.orderId = orderId;
-      })
-      entity = await strapi.services.transaction.create(ctx.request.body);
+      const resMidtrans = await snap.createTransaction(parameter)
+      let transactionToken = resMidtrans.token;
+      ctx.request.body.transactionToken = transactionToken;
+      ctx.request.body.orderId = orderIdMidtrans;
+
+      // update transaction
+      entity = await strapi.services.transaction.update({ id: entity.id }, ctx.request.body);
     }
     return sanitizeEntity(entity, { model: strapi.models.transaction });
   },
